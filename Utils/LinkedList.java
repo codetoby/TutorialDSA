@@ -83,5 +83,9 @@ public class LinkedList<E> {
         return size;
     }
 
+    public Node<E> getHeader() {
+        return header;
+    }
+
     
 }
