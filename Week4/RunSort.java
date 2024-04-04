@@ -10,7 +10,7 @@ public class RunSort {
         System.out.print("Unordered: ");
         printNums(nums);
 
-        Sort sort = new QuickSort();
+        Sort sort = new HeapSort();
         sort.sort(nums);
 
         System.out.print("Ordered: ");

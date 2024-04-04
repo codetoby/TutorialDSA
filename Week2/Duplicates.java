@@ -1,6 +1,7 @@
 package Week2;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class Duplicates {
 
@@ -24,9 +25,27 @@ public class Duplicates {
         return false;
     }
 
+    public static boolean hasDuplicates() {
+        return false;
+    }
+
+    public static HashSet<Integer> getUnique(int[] nums) {
+        HashSet<Integer> result = new HashSet<>();
+        HashSet<Integer> duplicates = new HashSet<>();
+
+        for (int i = 0; i < nums.length; i++) {
+            if (!result.add(nums[i])) {
+                duplicates.add(nums[i]);
+            }
+        }
+
+        return duplicates;
+    }
+
     public static void main(String[] args) {
-        int[] nums = {1, 1, 1, 2, 3, 4, 1};
-        System.out.println(hasKDuplicates(nums, 3));
+        int[] nums = {1, 1, 1, 2, 3, 4, 1, 2 , 3};
+        System.out.println(getUnique(nums));
+        // System.out.println(hasKDuplicates(nums, 3));
     }
     
 }

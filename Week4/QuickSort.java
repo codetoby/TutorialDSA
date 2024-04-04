@@ -1,7 +1,5 @@
 package Week4;
 
-import java.util.Arrays;
-
 public class QuickSort implements Sort {
     
     public void sort(int[] nums) {
